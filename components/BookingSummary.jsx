@@ -1,4 +1,5 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 const BookingSummary = ({ selectedSeats, seatPrices, seatCategories }) => {
   const totalPrice = selectedSeats.reduce(
@@ -13,7 +14,7 @@ const BookingSummary = ({ selectedSeats, seatPrices, seatCategories }) => {
       <p>Total Price: ₹{totalPrice}</p>
       <button
         className="mt-2 px-4 py-2 bg-blue-500 text-white rounded"
-        onClick={() => alert("Booking Confirmed")}
+        onClick={() => toast.success("Booking Confirmed")}
         disabled={selectedSeats.length === 0}
       >
         Book Now

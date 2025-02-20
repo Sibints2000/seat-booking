@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Seat from "./Seat";
 import BookingSummary from "./BookingSummary";
+import { toast } from "react-toastify";
 
 const rows = ["A", "B", "C", "D", "E", "F"];
 const cols = 10;
@@ -24,7 +25,7 @@ const SeatGrid = () => {
       if (selectedSeats.length < 8) {
         setSelectedSeats([...selectedSeats, seatId]);
       } else {
-        alert("You can only select up to 8 seats");
+        toast.error("You can only select up to 8 seats");
       }
     }
   };

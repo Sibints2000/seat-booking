@@ -1,4 +1,5 @@
 import SeatGrid from "../components/SeatGrid";
+import { ToastContainer, toast } from "react-toastify";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
         Interactive Seat Booking
       </h1>
       <SeatGrid />
+      <ToastContainer />
     </div>
   );
 }
