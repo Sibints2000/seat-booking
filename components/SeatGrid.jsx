@@ -31,7 +31,15 @@ const SeatGrid = () => {
 
   return (
     <div className="flex flex-col items-center p-4">
-      <div className="grid grid-cols-10 gap-2">
+      {/* Theater Screen */}
+      <p className="text-black mt-10">Facing this side</p>
+      <div className="w-full flex justify-center rounded-t-full">
+        <div className="w-full bg-gray-300 text-white text-center py-3 rounded-t-lg shadow-lg"></div>
+      </div>
+      <div className="h-10 w-full bg-gradient-to-b from-sky-200 to-sky-100"></div>
+
+      {/* Seat Layout */}
+      <div className="mt-4 grid grid-cols-10 gap-2 p-4 bg-white rounded-lg shadow-lg">
         {rows.map((row) => {
           const category = seatCategories[row];
           const seats = [];
@@ -51,6 +59,8 @@ const SeatGrid = () => {
           return seats;
         })}
       </div>
+
+      {/* Booking Summary */}
       <BookingSummary
         selectedSeats={selectedSeats}
         seatPrices={seatPrices}

@@ -7,7 +7,7 @@ const BookingSummary = ({ selectedSeats, seatPrices, seatCategories }) => {
   );
 
   return (
-    <div className="mt-4 p-4 bg-gray-200 rounded-lg text-center">
+    <div className="mt-4 p-4 bg-gray-200 rounded-lg text-center text-black">
       <h2 className="text-lg font-semibold">Booking Summary</h2>
       <p>Selected Seats: {selectedSeats.join(", ") || "None"}</p>
       <p>Total Price: ₹{totalPrice}</p>
